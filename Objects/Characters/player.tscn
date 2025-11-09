@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ctc58h2gd317b"]
+[gd_scene load_steps=39 format=3 uid="uid://ctc58h2gd317b"]
 
 [ext_resource type="Texture2D" uid="uid://c6w10fg8dnrq0" path="res://Assets/Characters/mizi spritesheet.png" id="1_2y3li"]
 [ext_resource type="Script" uid="uid://dlemptaap6v2r" path="res://Objects/Characters/PlayerMovement.cs" id="2_h3hc8"]
@@ -440,12 +440,15 @@ _data = {
 &"Up": SubResource("Animation_sln8r")
 }
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_r7kiy"]
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_r7kiy"]
-graph_offset = Vector2(-48.45456, -43.909096)
-nodes/output/position = Vector2(460, 100)
+nodes/output/position = Vector2(640, 100)
 nodes/PlayerStates/node = ExtResource("2_r7kiy")
-nodes/PlayerStates/position = Vector2(180, 40)
-node_connections = [&"output", 0, &"PlayerStates"]
+nodes/PlayerStates/position = Vector2(160, 60)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_r7kiy")
+nodes/TimeScale/position = Vector2(440, 20)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"PlayerStates"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r7kiy"]
 size = Vector2(32, 32)
@@ -455,8 +458,7 @@ collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cdyyq")
-animation = &""
-frame = 1
+animation = &"IdleDown"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -469,6 +471,7 @@ advance_expression_base_node = NodePath("../PlayerMovement")
 anim_player = NodePath("../AnimationPlayer")
 parameters/PlayerStates/Idle/blend_position = Vector2(0, 0)
 parameters/PlayerStates/Move/blend_position = Vector2(0, 0)
+parameters/TimeScale/scale = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_r7kiy")

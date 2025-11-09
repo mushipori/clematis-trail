@@ -16,9 +16,8 @@ public partial class PlayerMovement : Node2D
 	[Export]
 	private RayCast2D rayCast;
 
-	private readonly float walkSpeed = .25f;
-	private readonly float runSpeed = .15f;
-	private readonly float moveSpeed = .25f;
+	private readonly float runScale = 2;
+	private readonly float walkScale = 1;
 	private bool isMoving = false;
 	private Vector2 currDirection = Vector2.Down;
 	private CharacterBody2D player;
@@ -51,7 +50,8 @@ public partial class PlayerMovement : Node2D
 		rayCast.Rotation = currDirection.Angle();
 		rayCast.ForceRaycastUpdate();
 
-		// if (Input.IsActionPressed("run"))
+		if (Input.IsActionPressed("run")) animationTree.Set("parameters/TimeScale/scale", runScale);
+		else animationTree.Set("parameters/TimeScale/scale", walkScale);
 
 		if (!isMoving)
 		{
@@ -66,7 +66,7 @@ public partial class PlayerMovement : Node2D
 			{
 				Vector2 targetPosition = player.Position + (currDirection * Constants.TILE_SIZE);
 				Tween tween = CreateTween();
-				tween.TweenProperty(player, "position", targetPosition, moveSpeed);
+				tween.TweenProperty(player, "position", targetPosition, .25 / (int)animationTree.Get("parameters/TimeScale/scale"));
 				tween.TweenCallback(Callable.From(MoveStop));
 			}
 		}
