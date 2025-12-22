@@ -1,9 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://ctc58h2gd317b"]
+[gd_scene load_steps=40 format=3 uid="uid://ctc58h2gd317b"]
 
 [ext_resource type="Texture2D" uid="uid://c6w10fg8dnrq0" path="res://Assets/Characters/mizi spritesheet.png" id="1_2y3li"]
 [ext_resource type="Script" uid="uid://dlemptaap6v2r" path="res://Objects/Characters/PlayerMovement.cs" id="2_h3hc8"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://cikmole2b06ot" path="res://Assets/Animations/PlayerStates.tres" id="2_r7kiy"]
-[ext_resource type="Script" uid="uid://b8g07nfra6ctf" path="res://Objects/Characters/InputManager.cs" id="4_r7kiy"]
+[ext_resource type="Script" uid="uid://dks7k72haietu" path="res://Objects/Characters/MovementController.cs" id="4_r7kiy"]
+[ext_resource type="PackedScene" uid="uid://cmcor7l46cr17" path="res://Objects/UI/menu.tscn" id="5_qfybb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kaojo"]
 atlas = ExtResource("1_2y3li")
@@ -476,16 +477,18 @@ parameters/TimeScale/scale = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_r7kiy")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MovementRayCast" type="RayCast2D" parent="."]
+rotation = 1.5707964
+target_position = Vector2(16, 0)
+
 [node name="PlayerMovement" type="Node2D" parent="." node_paths=PackedStringArray("animationTree", "rayCast")]
 script = ExtResource("2_h3hc8")
 animationTree = NodePath("../AnimationTree")
 rayCast = NodePath("../MovementRayCast")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="InputManager" type="Node" parent="."]
+[node name="MovementInputManager" type="Node" parent="."]
 script = ExtResource("4_r7kiy")
 
-[node name="MovementRayCast" type="RayCast2D" parent="."]
-rotation = 1.5707964
-target_position = Vector2(16, 0)
+[node name="Menu" parent="." instance=ExtResource("5_qfybb")]

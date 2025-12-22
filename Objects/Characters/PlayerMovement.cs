@@ -1,5 +1,3 @@
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using ClematisTrail.GlobalScripts;
 using Godot;
 
@@ -42,6 +40,7 @@ public partial class PlayerMovement : Node2D
 	/// InputManager detecs movement input and will fire this function.
 	/// Controls the player's movement and movement animations.
 	/// </summary>
+	/// 
 	/// <param name="direction">Direction the player will face</param>
 	private void Move(Vector2 direction)
 	{
@@ -57,6 +56,7 @@ public partial class PlayerMovement : Node2D
 		{
 			isMoving = true;
 			animationTree.Set("parameters/PlayerStates/Move/blend_position", currDirection);
+			// Debug.WriteLine("isMoving currdirection: " + currDirection);
 
 			if (rayCast.IsColliding())
 			{
@@ -75,6 +75,7 @@ public partial class PlayerMovement : Node2D
 	private void MoveStop()
 	{
 		isMoving = false;
+		// Debug.WriteLine("MoveStop currdirection: " + currDirection);
 		animationTree.Set("parameters/PlayerStates/Idle/blend_position", currDirection);
 	}
 }
