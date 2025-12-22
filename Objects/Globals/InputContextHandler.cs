@@ -15,7 +15,7 @@ public partial class InputContextHandler : Node
 
 	public override void _ExitTree()
 	{
-		base._ExitTree();
+		InputEvents.OnContextSwitch -= SwitchInputContext;
 	}
 
 	private void SwitchInputContext(Constants.InputContexts context)

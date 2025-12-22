@@ -8,7 +8,7 @@ namespace ClematisTrail.Objects.Characters;
 /// <summary>
 /// Manages raising events related to player input
 /// </summary>
-public partial class MovementInputManager : Node
+public partial class MovementController : Node
 {
 	public bool canMove = true;
 	private Vector2 direction = Vector2.Zero;
@@ -64,10 +64,6 @@ public partial class MovementInputManager : Node
 				{
 					direction = inputQueue[0];
 					// Debug.WriteLine("QUEUE:");
-					foreach (var item in inputQueue)
-					{
-						Debug.WriteLine(item);
-					}
 				}
 				InputEvents.RaisePlayerMove(direction);
 			}

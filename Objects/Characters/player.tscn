@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c6w10fg8dnrq0" path="res://Assets/Characters/mizi spritesheet.png" id="1_2y3li"]
 [ext_resource type="Script" uid="uid://dlemptaap6v2r" path="res://Objects/Characters/PlayerMovement.cs" id="2_h3hc8"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://cikmole2b06ot" path="res://Assets/Animations/PlayerStates.tres" id="2_r7kiy"]
-[ext_resource type="Script" uid="uid://b8g07nfra6ctf" path="res://Objects/Characters/MovementInputManager.cs" id="4_r7kiy"]
+[ext_resource type="Script" uid="uid://dks7k72haietu" path="res://Objects/Characters/MovementController.cs" id="4_r7kiy"]
 [ext_resource type="PackedScene" uid="uid://cmcor7l46cr17" path="res://Objects/UI/menu.tscn" id="5_qfybb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kaojo"]
