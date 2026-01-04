@@ -1,7 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cw6aycm6aj3a1"]
-
-[ext_resource type="Script" uid="uid://can62qfnypiib" path="res://addons/dialogue_nodes/objects/DialogueData.cs" id="1_f2rtd"]
-
-[resource]
-script = ExtResource("1_f2rtd")
-FileName = "dialoguenodes"
