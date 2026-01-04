@@ -14,7 +14,7 @@ public partial class Tab : TextureButton
 	private TextureButton initialPageButton;
 	[Export]
 	private TextureRect tabPage;
-	private bool pageSelected = false;
+	private bool isPageSelected = false;
 
 	public override void _EnterTree()
 	{
@@ -43,7 +43,7 @@ public partial class Tab : TextureButton
 
 	private void OnFocusExited()
 	{
-		if (!pageSelected)
+		if (!isPageSelected)
 		{
 			tabPage.Hide();
 		}
@@ -60,11 +60,11 @@ public partial class Tab : TextureButton
 
 	private void EnablePageControl()
 	{
-		pageSelected = true; // Prevent page from being hidden in OnFocusExited
+		isPageSelected = true; // Prevent page from being hidden in OnFocusExited
 	}
 
 	private void DisablePageControl()
 	{
-		pageSelected = false; // Tab control should be on. Allow page to be hidden in OnFocusExited
+		isPageSelected = false; // Tab control should be on. Allow page to be hidden in OnFocusExited
 	}
 }
