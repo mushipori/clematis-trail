@@ -15,7 +15,7 @@ public partial class Menu : Node
 	private Control pageGroup;
 	[Export]
 	private TextureButton activeTab; // Track last active tab, so the state is kept when menu is closed and reopened
-	private bool pageSelected = false; // When true, user can select page items and cancelling will return to tab
+	private bool isPageSelected = false; // When true, user can select page items and cancelling will return to tab
 
 	public override void _Ready()
 	{
@@ -45,7 +45,7 @@ public partial class Menu : Node
 				activeTab.CallDeferred("grab_focus"); // Last active tab will be focused
 			}
 		}
-		else if (pageSelected)
+		else if (isPageSelected)
 		{
 			// If focus on menu page element and cancel pressed, then return focus to the tab of that page
 			if (Input.IsActionJustPressed(Constants.UI_CANCEL_INPUT))
@@ -72,12 +72,12 @@ public partial class Menu : Node
 
 	private void EnablePageControl()
 	{
-		pageSelected = true;
+		isPageSelected = true;
 	}
 
 	private void DisablePageControl()
 	{
-		pageSelected = false;
+		isPageSelected = false;
 	}
 
 	private void UpdateActiveTab(TextureButton tab)

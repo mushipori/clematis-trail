@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ctc58h2gd317b"]
+[gd_scene load_steps=40 format=3 uid="uid://dumqu5y607c5g"]
 
 [ext_resource type="Texture2D" uid="uid://c6w10fg8dnrq0" path="res://Assets/Characters/mizi spritesheet.png" id="1_2y3li"]
 [ext_resource type="Script" uid="uid://dlemptaap6v2r" path="res://Objects/Characters/PlayerMovement.cs" id="2_h3hc8"]
