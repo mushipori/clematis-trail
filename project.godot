@@ -16,7 +16,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InputContextHandler="*res://Objects/Globals/InputContextHandler.cs"
+InputContextHandler="*res://Globals/InputContextHandler.cs"
+InputManager="*res://Globals/InputManager.cs"
 
 [display]
 
@@ -26,7 +27,7 @@ window/stretch/mode="viewport"
 
 [dotnet]
 
-project/assembly_name="New Game Project"
+project/assembly_name="Clematis Trail"
 
 [gui]
 

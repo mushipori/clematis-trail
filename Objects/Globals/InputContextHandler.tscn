@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://krdq7xnekh5"]
-
-[ext_resource type="Script" path="res://Objects/Globals/InputContextHandler.cs" id="1_2r7n3"]
-
-[node name="InputContextHandler" type="Node"]
-script = ExtResource("1_2r7n3")

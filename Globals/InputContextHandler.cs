@@ -1,7 +1,6 @@
-using ClematisTrail.Globals;
 using Godot;
 
-namespace ClematisTrail.Objects.Globals;
+namespace ClematisTrail.Globals;
 
 /// <summary>
 /// Handles context switch event

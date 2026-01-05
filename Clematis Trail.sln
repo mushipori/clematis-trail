@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clematis Trail", "Clematis Trail.csproj", "{E61A6027-BF86-4A73-96D5-264589578561}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clematis Trail", "Clematis Trail.csproj", "{AA278015-83ED-4424-8537-03C6B0A2AB1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E61A6027-BF86-4A73-96D5-264589578561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E61A6027-BF86-4A73-96D5-264589578561}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E61A6027-BF86-4A73-96D5-264589578561}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{E61A6027-BF86-4A73-96D5-264589578561}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{E61A6027-BF86-4A73-96D5-264589578561}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{E61A6027-BF86-4A73-96D5-264589578561}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{AA278015-83ED-4424-8537-03C6B0A2AB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA278015-83ED-4424-8537-03C6B0A2AB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA278015-83ED-4424-8537-03C6B0A2AB1A}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{AA278015-83ED-4424-8537-03C6B0A2AB1A}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{AA278015-83ED-4424-8537-03C6B0A2AB1A}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{AA278015-83ED-4424-8537-03C6B0A2AB1A}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal
